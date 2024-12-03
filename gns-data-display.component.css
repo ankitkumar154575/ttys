@@ -1,0 +1,71 @@
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px; /* Default row spacing */
+  padding: 0;
+}
+
+.row .colum:first-child {
+  margin-left: 10px; /* Add space before the first column */
+}
+
+.colum {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+
+.colum1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.mwi-label-1 {
+  margin-bottom: 5px; /* Adjust spacing between labels */
+}
+
+.grey-box {
+  background-color: grey;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.white-box {
+  background-color: #ffffff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.tight-row {
+  margin-top: 5px; /* Reduced spacing for tight rows */
+}
+
+.subject-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.subject-table th,
+.subject-table td {
+  border: 1px solid black; /* Black border for table */
+  padding: 8px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.subject-table th {
+  background-color: #f2f2f2; /* Light grey background for headers */
+  font-weight: bold;
+}
+
+.subject-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light grey for alternate rows */
+}
+
+.subject-table tbody tr:hover {
+  background-color: #eaeaea; /* Highlight row on hover */
+}

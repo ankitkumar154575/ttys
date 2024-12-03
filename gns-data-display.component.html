@@ -1,0 +1,152 @@
+<div class="grey-box">
+  <span>Global Name Search Work Item</span>
+  <span>Business Unit: | Priority: {{ gnsData?.priority }} | Owner: | Item Date:</span>
+</div>
+
+<div class="row tight-row">
+  <div class="colum">
+    <div class="mwi-label-1"><label>Request Id: {{ gnsData?.requestId }}</label></div>
+    <div class="mwi-label-1"><label>Request Id: {{ gnsData?.requestId }}</label></div>
+  </div>
+  <div class="colum">
+    <div class="mwi-label-1"><label>Request Status: {{ gnsData?.requestStatus }}</label></div>
+    <div class="mwi-label-1"><label>Submitted by: {{ gnsData?.submittedBy }}</label></div>
+  </div>
+  <div class="colum">
+    <div class="mwi-label-1"><label>Priority: {{ gnsData?.priority }}</label></div>
+    <div class="mwi-label-1"><label>Name of Supervisor who approved this referral: {{ gnsData?.refrlApprover }}</label></div>
+  </div>
+  <div class="colum">
+    <div class="mwi-label-1"><label>Original Case Id: {{ gnsData?.orgCaseIdentifier }}</label></div>
+  </div>
+</div>
+
+<div class="grey-box" style="margin-top: 10px;">
+  <span>Summary Details:</span>
+</div>
+
+<div class="row tight-row">
+  <div class="colum">
+    <div class="mwi-label-1"><label>Brief recap with the reason of request</label></div>
+    <div class="mwi-label-1"><label>Source of referral: {{ gnsData?.srcOfRefrl }}</label></div>
+    <div class="mwi-label-1"><label>Reason for referral: {{ gnsData?.reasonForRefrl }}</label></div>
+    <div class="mwi-label-1"><label>Potential Activity of Concern: {{ gnsData?.actvtyOfConcern }}</label></div>
+    <div class="mwi-label-1"><label>Negative News: {{ gnsData?.negativeNews }}</label></div>
+    <div class="mwi-label-1"><label>Relevant case number: {{ gnsData?.relevantCaseIds }}</label></div>
+    <div class="mwi-label-1"><label>Share any additional information that may be pertinent: {{ gnsData?.additionalInfo }}</label></div>
+  </div>
+  <div class="colum">
+    <div class="mwi-label-1"><label>Referrer First Name: {{ gnsData?.referrerFirstName }}</label></div>
+    <div class="mwi-label-1"><label>Referrer Last Name: {{ gnsData?.referrerLastName }}</label></div>
+    <div class="mwi-label-1"><label>Primary Typology: {{ gnsData?.primaryTopology }}</label></div>
+    <div class="mwi-label-1"><label>Secondary Typology: {{ gnsData?.secondaryTopology }}</label></div>
+    <div class="mwi-label-1"><label>Is there a GC or SE/Project Lead: {{ gnsData?.projectLeadFlag }}</label></div>
+  </div>
+</div>
+
+<div class="grey-box">
+  <span>Analyst Best Practice Reminders, Acknowledgments, and Rationals:</span>
+</div>
+
+<div class="row tight-row">
+  <div class="colum1">
+    <div class="mwi-label-1">
+      <label>
+        Confirm that reasonable attempts to obtain all identifiers requested in the GNS template, including MSS,
+        Open Source, and LexisNexis (as applicable), have been conducted prior to submission.
+      </label>
+    </div>
+    <div class="mwi-label-1">
+      <label>
+        Confirm search for complete subject names were conducted (as applicable, when only a middle initial
+        that the complete middle name is also included when available).
+      </label>
+    </div>
+    <div class="mwi-label-1">
+      <label>
+        Confirm that all subjects and applicable name variations, including those mentioned in All case title and
+        summary, are listed in GNS template.
+      </label>
+    </div>
+    <div class="mwi-label-1">
+      <label>
+        Provide rationale if Government ID Number/ID Type/Issuing Authority or Date of Birth/Incorporation
+        were not entered.
+      </label>
+    </div>
+  </div>
+</div>
+
+<div class="grey-box">
+  <span>Head of Country/State, SPF, or High Profile Status:</span>
+</div>
+
+<div class="white-box">
+  <div class="row tight-row">
+    <div class="colum1">
+      <div class="mwi-label-1">
+        <label>Does this GNS include any SPF or high-profile individuals, entities, or events?</label>
+      </div>
+      <div class="mwi-label-1">
+        <label>Does this GNS include a current or former Head of Country/State or their family members?</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="grey-box" style="margin-top: 10px;">
+  <span>Referred Subject Information</span>
+</div>
+
+<div class="row tight-row">
+  <table class="subject-table">
+    <thead>
+      <tr>
+        <th>Subject ID</th>
+        <th>Record Identifier</th>
+        <th>Full Name</th>
+        <th>First Name</th>
+        <th>Middle Name</th>
+        <th>Last Name</th>
+        <th>Entity Name</th>
+        <th>Suffix</th>
+        <th>Alias First Name</th>
+        <th>Alias Middle Name</th>
+        <th>Alias Last Name</th>
+        <th>Alias Suffix</th>
+        <th>Date of Birth</th>
+        <th>Age</th>
+        <th>Government ID Number</th>
+        <th>Government ID Type</th>
+        <th>Government ID Issuing Authority</th>
+        <th>Street Address</th>
+        <th>City</th>
+        <th>State</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ gnsData?.subjectId1 }}</td>
+        <td>{{ gnsData?.recordIdentifier1 }}</td>
+        <td>{{ gnsData?.fullName1 }}</td>
+        <td>{{ gnsData?.firstName1 }}</td>
+        <td>{{ gnsData?.middleName1 }}</td>
+        <td>{{ gnsData?.lastName1 }}</td>
+        <td>{{ gnsData?.entityName1 }}</td>
+        <td>{{ gnsData?.suffix1 }}</td>
+        <td>{{ gnsData?.aliasFirstName1 }}</td>
+        <td>{{ gnsData?.aliasMiddleName1 }}</td>
+        <td>{{ gnsData?.aliasLastName1 }}</td>
+        <td>{{ gnsData?.aliasSuffix1 }}</td>
+        <td>{{ gnsData?.dob1 }}</td>
+        <td>{{ gnsData?.age1 }}</td>
+        <td>{{ gnsData?.govIdNumber1 }}</td>
+        <td>{{ gnsData?.govIdType1 }}</td>
+        <td>{{ gnsData?.govIdIssuingAuthority1 }}</td>
+        <td>{{ gnsData?.streetAddress1 }}</td>
+        <td>{{ gnsData?.city1 }}</td>
+        <td>{{ gnsData?.state1 }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
