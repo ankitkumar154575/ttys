@@ -128,3 +128,95 @@
 }
 
 
+// changes
+
+
+{
+  "entities": [
+    {
+      "entityName": "Entity A",
+      "entityType": "Company",
+      "country": "USA"
+    },
+    {
+      "entityName": "Entity B",
+      "entityType": "Individual",
+      "country": "India"
+    }
+  ],
+  "identification": [
+    {
+      "idType": "Passport",
+      "idNumber": "P123456",
+      "issuedCountry": "USA"
+    },
+    {
+      "idType": "Aadhar",
+      "idNumber": "A987654",
+      "issuedCountry": "India"
+    }
+  ]
+}
+
+
+
+<div class="popup-container">
+  <div class="popup-header">
+    <button class="close-btn" (click)="closePopup()">X</button>
+  </div>
+
+  <h2>Entity Information</h2>
+  <table>
+    <tr>
+      <th>Entity Name</th>
+      <th>Entity Type</th>
+      <th>Country</th>
+    </tr>
+    <tr *ngFor="let entity of kycData.entities">
+      <td>{{ entity.entityName }}</td>
+      <td>{{ entity.entityType }}</td>
+      <td>{{ entity.country }}</td>
+    </tr>
+  </table>
+
+  <h2>Identification</h2>
+  <table>
+    <tr>
+      <th>ID Type</th>
+      <th>ID Number</th>
+      <th>Issued Country</th>
+    </tr>
+    <tr *ngFor="let id of kycData.identification">
+      <td>{{ id.idType }}</td>
+      <td>{{ id.idNumber }}</td>
+      <td>{{ id.issuedCountry }}</td>
+    </tr>
+  </table>
+</div>
+
+
+.popup-container {
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.popup-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
