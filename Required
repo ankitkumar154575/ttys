@@ -1,0 +1,37 @@
+{
+  "entities": [
+    {
+      "gfCid": "GF123456",
+      "entityName": "ABC Corp",
+      "typeOfProfile": "Corporate",
+      "relationshipName": "Main Account",
+      "relationshipNameText": "Corporate Client",
+      "aliases": "ABC Inc.",
+      "dobOrIncorpDate": "2010-08-15",
+      "countryOfIncorp": "Singapore",
+      "registryNumber": "SG12345678A",
+      "nationality": "SG",
+      "idType": "NRIC",
+      "idNumber": "S1234567A",
+      "idExpiry": "2030-01-01",
+      "telephone": {
+        "type": "Home",
+        "countryCode": "SG",
+        "areaCode": "22",
+        "number": "6692-1000"
+      },
+      "address": {
+        "structured": "Yes",
+        "type": "Mailing",
+        "countryCode": "SG",
+        "postalCode": "49315",
+        "city": "Singapore",
+        "lines": ["Line 1", "Line 2", "Line 3"]
+      },
+      "role": "Director",
+      "sddDescription": "Low Risk",
+      "kycStatus": "Completed",
+      "kycAppendixStatus": "Verified"
+    }
+  ]
+}
