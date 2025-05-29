@@ -35,3 +35,61 @@
     }
   ]
 }
+
+
+<div class="popup-backdrop">
+  <div class="popup-content">
+    <button class="close-btn" (click)="closePopup()">X</button>
+
+    <div *ngFor="let entity of kycData">
+      <h3>Entity Information</h3>
+      <table>
+        <tr><td>GFCID:</td><td>{{entity.gfCid}}</td></tr>
+        <tr><td>Entity Name:</td><td>{{entity.entityName}}</td></tr>
+        <tr><td>Type of Profile:</td><td>{{entity.typeOfProfile}}</td></tr>
+        <tr><td>Relationship Name:</td><td>{{entity.relationshipName}}</td></tr>
+        <tr><td>Aliases:</td><td>{{entity.aliases}}</td></tr>
+        <tr><td>Date of Incorporation:</td><td>{{entity.dobOrIncorpDate}}</td></tr>
+        <tr><td>Country of Incorporation:</td><td>{{entity.countryOfIncorp}}</td></tr>
+        <tr><td>Registry Number:</td><td>{{entity.registryNumber}}</td></tr>
+      </table>
+
+      <h4>Identification</h4>
+      <table>
+        <tr><td>Country Code:</td><td>{{entity.nationality}}</td></tr>
+        <tr><td>ID Type:</td><td>{{entity.idType}}</td></tr>
+        <tr><td>ID Number:</td><td>{{entity.idNumber}}</td></tr>
+        <tr><td>Expiry Date:</td><td>{{entity.idExpiry}}</td></tr>
+      </table>
+
+      <h4>Telephone</h4>
+      <table>
+        <tr><td>Type:</td><td>{{entity.telephone.type}}</td></tr>
+        <tr><td>Country Code:</td><td>{{entity.telephone.countryCode}}</td></tr>
+        <tr><td>Area Code:</td><td>{{entity.telephone.areaCode}}</td></tr>
+        <tr><td>Number:</td><td>{{entity.telephone.number}}</td></tr>
+      </table>
+
+      <h4>Address</h4>
+      <table>
+        <tr><td>Structured:</td><td>{{entity.address.structured}}</td></tr>
+        <tr><td>Type:</td><td>{{entity.address.type}}</td></tr>
+        <tr><td>Country Code:</td><td>{{entity.address.countryCode}}</td></tr>
+        <tr><td>Postal Code:</td><td>{{entity.address.postalCode}}</td></tr>
+        <tr><td>City:</td><td>{{entity.address.city}}</td></tr>
+        <tr><td>Address Lines:</td><td>{{entity.address.lines.join(', ')}}</td></tr>
+      </table>
+
+      <h4>Other</h4>
+      <table>
+        <tr><td>Role:</td><td>{{entity.role}}</td></tr>
+        <tr><td>SDD Description:</td><td>{{entity.sddDescription}}</td></tr>
+        <tr><td>KYC Status:</td><td>{{entity.kycStatus}}</td></tr>
+        <tr><td>KYC Appendix Status:</td><td>{{entity.kycAppendixStatus}}</td></tr>
+      </table>
+
+      <hr />
+    </div>
+  </div>
+</div>
+
